@@ -1,0 +1,23 @@
+﻿<Window x:Class="WPF_Math_Game_Outline.wndGame"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="wndGame" Height="342" Width="598">
+    <Window.Background>
+        <ImageBrush ImageSource="Images\robloxcrossroads.jpg" Stretch="UniformToFill">
+        </ImageBrush>
+    </Window.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="42*"/>
+            <RowDefinition Height="121*"/>
+        </Grid.RowDefinitions>
+        <Button Content="Start Game" FontSize="18" Height="45" HorizontalAlignment="Center" Margin="0,79,0,0" x:Name="StartGameButton" VerticalAlignment="Top" Width="198" Click="cmdStartGame_Click" Background="#FF232527" Foreground="White" Grid.Row="1" />
+        <Button Content="Final Score Screen" FontSize="18" Height="45" HorizontalAlignment="Center" Margin="0,129,0,0" Name="cmdFinalScoreScreen" VerticalAlignment="Top" Width="198" Click="cmdFinalScoreScreen_Click" Background="#FF232527" Foreground="White" Grid.Row="1" />
+        <Label x:Name="QuestionCounterLabel" Content="Question 1" HorizontalAlignment="Left" Margin="228,34,0,0" VerticalAlignment="Top" Background="#FF232527" Foreground="White"/>
+        <TextBox x:Name="AnswerTextBox" HorizontalAlignment="Left" Margin="304,80,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" KeyDown="AnswerTextBox_KeyDown" Grid.RowSpan="2"/>
+        <Label x:Name="TimerLabel" Content="Time Elapsed: 0" HorizontalAlignment="Left" Margin="55,76,0,0" VerticalAlignment="Top" Background="#FF232527" Foreground="White" Grid.RowSpan="2"/>
+        <Button Content="Return Main Menu" FontSize="18" Height="45" HorizontalAlignment="Center" Margin="0,79,0,0" x:Name="ReturnMenuButton" VerticalAlignment="Top" Width="198" Visibility="Hidden" Click="cmdReturnToMainMenu_Click" Background="#FF232527" Foreground="White" Grid.Row="1"/>
+        <Label x:Name="QuestionContentLabel" Content="" Margin="221,73,294,0" VerticalAlignment="Top" RenderTransformOrigin="1.277,0.685" Background="#FF232527" Foreground="White" Grid.RowSpan="2"/>
+        <Button x:Name="SubmitAnswerButton" Content="Submit" HorizontalAlignment="Left" Margin="429,79,0,0" VerticalAlignment="Top" Click="SubmitAnswerButton_Click" Background="#FF232527" Foreground="White" Grid.RowSpan="2"/>
+    </Grid>
+</Window>
